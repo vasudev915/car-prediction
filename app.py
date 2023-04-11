@@ -19,7 +19,7 @@ def main():
 @app.route('/predict',methods=['POST'])
 def predict():
 	int_features =[[x for x in request.form.values()]]
-	c = ["Fuel_Type","Seller_Type","Transmission","Present_Price","Kms_Driven","Owner","No_year"]
+	c = ["arvind height","arvind_Type","Transmission","arvind_Price","arvind_Driven","arvind-Owner","arvind_year"]
 	df = pd.DataFrame(int_features,columns=c)
 	l = onehot.transform(df.iloc[:,:3])
 	c = onehot.get_feature_names_out()
